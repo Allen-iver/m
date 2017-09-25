@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="../res/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <title>剁手</title>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav cz_header">
+    <a href="javascript:history.back();" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 id="title" class="mui-title">注册</h1>
+</header>
+
+<div class="discript">
+    <div class="content">
+
+    </div>
+</div>
+
+<div class="cz_content">
+    <form class="cz_form">
+        <div class="mui-input-row">
+            <input type="text" class="mui-input-clear" id="tel" name="tel" placeholder="手机号">
+        </div>
+        <div class="mui-input-row">
+            <input type="text" class="mui-input-clear" id="username" name="user_name" placeholder="用户名">
+        </div>
+        <div class="mui-input-row">
+            <input type="password"  id="password" class=" mui-input-password" name="password" placeholder="密码">
+        </div>
+        <div class="mui-input-row">
+            <input type="password" id="repassword" required class=" mui-input-password" name="repassword" placeholder="确认密码">
+        </div>
+        <div class="btn_code">
+            <input type="text" class="vcode" id="vcodeId" name="verify" placeholder="验证码">
+            <a href="javascript:;" class="btn_code mui-btn getCode_btn">获取短信验证码</a>
+        </div>
+    </form>
+</div>
+
+<!--用户协议-->
+<div class="register_user">
+    <div class="login_zc">
+        <a href="javascript:;"><img src="../images/zc.gif" alt=""></a>
+    </div>
+</div>
+
+<div class="register_re">
+    <label>
+        <input type="radio" name="user_xy"> <span>《用户协议》</span>
+    </label>
+</div>
+
+<script src="../res/mui/js/mui.min.js"></script>
+<script src="../res/zepto/zepto.min.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript" src="../js/register.js"></script>
+
+</body>
+</html>

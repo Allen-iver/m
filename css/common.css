@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #333;
+}
+.borderBox {
+  display: block;
+  width: 100%;
+}
+.mui-bar {
+  background-color: #ff520b;
+}
+.mui-bar-tab .mui-tab-item {
+  color: #fff;
+}
+.mui-bar-tab .mui-tab-item.mui-active {
+  color: #FFE62D;
+}
+@media only screen and (width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media only screen and (width: 360px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media only screen and (width: 375px) {
+  html {
+    font-size: 18.75px;
+  }
+}
+@media only screen and (width: 400px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media only screen and (width: 412px) {
+  html {
+    font-size: 20.6px;
+  }
+}
+@media only screen and (width: 414px) {
+  html {
+    font-size: 20.7px;
+  }
+}
