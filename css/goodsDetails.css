@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #333;
+}
+.borderBox {
+  display: block;
+  width: 100%;
+}
+.mui-bar {
+  background-color: #ff520b;
+}
+.mui-bar-tab .mui-tab-item {
+  color: #fff;
+}
+.mui-bar-tab .mui-tab-item.mui-active {
+  color: #FFE62D;
+}
+@media only screen and (width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media only screen and (width: 360px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media only screen and (width: 375px) {
+  html {
+    font-size: 18.75px;
+  }
+}
+@media only screen and (width: 400px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media only screen and (width: 412px) {
+  html {
+    font-size: 20.6px;
+  }
+}
+@media only screen and (width: 414px) {
+  html {
+    font-size: 20.7px;
+  }
+}
+.mui-bar {
+  background-color: rgba(247, 247, 247, 0);
+  height: 45px;
+}
+#img1 {
+  width: 100%;
+}
+div.share {
+  padding: 0 10px;
+  float: right;
+  height: 44px;
+  line-height: 44px;
+}
+div.goodsname,
+div.price {
+  padding: 10px 15px;
+  position: relative;
+}
+div.goodsname:after,
+div.price:after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #cccccc;
+}
+div.price b {
+  font-size: 1.25rem;
+  color: #ff520b;
+}
+div.price span {
+  position: absolute;
+  right: 15px;
+}
+div.standard {
+  padding: 10px;
+  overflow: hidden;
+}
+div.standard li {
+  height: 1.2rem;
+  margin-top: 0.5rem;
+  margin-right: 1rem ;
+  width: 26%;
+  float: left;
+  border: 1px #ccc solid;
+}
+div.standard li.active {
+  border: 1px #ff520b solid;
+}
+div.standard li.active a {
+  color: #ff520b;
+}
+div.standard a {
+  width: 100%;
+  text-align: center;
+  display: block;
+  height: 100%;
+}
+div.standard a:hover {
+  color: #ff520b;
+}
+div.bot {
+  background-color: #FFFFFF;
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  height: 2.96296296rem;
+  width: 100%;
+}
+div.bot div {
+  float: left;
+  line-height: 2.96296296rem;
+  text-align: center;
+  position: relative;
+}
+div.bot div:after {
+  content: '';
+  width: 1.27777778rem;
+  height: 1.05555556rem;
+  margin-left: 0.5rem;
+  margin-top: 0.92592593rem;
+  display: block;
+  float: left;
+  background-size: 1.27777778rem 1.05555556rem;
+  background-repeat: no-repeat;
+}
+div.bot .favorite {
+  width: 5rem;
+}
+div.bot .favorite:after {
+  background-image: url("../images/sc.png");
+}
+div.bot .favorite.active:after {
+  background-image: url("../images/ysc.png");
+}
+div.bot .add_cart {
+  width: 7.5rem;
+}
+div.bot .add_cart:after {
+  background-image: url("../images/jwgwc.png");
+}
+div.bot .add_cart:before,
+div.bot .bug_now:before {
+  content: '';
+  height: 100%;
+  width: 1px;
+  background-color: #cccccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+div.bot .bug_now {
+  width: 7.5rem;
+}
+div.bot .bug_now:after {
+  background-image: url("../images/ljgm.png");
+}
+div.bot:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 0;
+  background-color: #ccc;
+  left: 0;
+}
+.other {
+  position: relative;
+}
+.other:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 0;
+  background-color: #ccc;
+  left: 0;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+  color: #ff520b;
+}
+.mui-segmented-control.mui-segmented-control-inverted ~ .mui-slider-progress-bar {
+  background-color: #ff520b;
+}
+#sliderSegmentedControl00 {
+  background-color: #eee;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+  border-color: #ff520b;
+}
+#item1mobile {
+  margin-bottom: 3.2037037rem;
+}
+#item1mobile img {
+  width: 100%;
+}
+#item2mobile {
+  margin-bottom: 3.2037037rem;
+}
+iframe {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none 0;
+  overflow: hidden;
+}
+#item2mobile li {
+  padding: 1rem;
+}
+#item2mobile li .item {
+  position: relative;
+}
+#item2mobile li .item img {
+  width: 2.09259259rem;
+  height: 2.09259259rem;
+  border: #cccccc 1px solid;
+  border-radius: 50%;
+}
+#item2mobile li .item b {
+  position: absolute;
+  top: 0.74074074rem;
+  margin-left: 10px;
+}
+#item2mobile li .item p {
+  margin-bottom: 5px;
+}
+#fixed_tab {
+  position: fixed;
+  top: 45px;
+  z-index: 99;
+  display: none;
+}

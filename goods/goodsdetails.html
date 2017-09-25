@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../res/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../css/goodsDetails.css">
+</head>
+<body>
+<header id="header" class="mui-bar mui-bar-transparent">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <div class="share">分享</div>
+</header>
+
+<div id="fixed_tab">
+    <div id="sliderSegmentedControl00"
+         class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+        <a class="mui-control-item" href="#item1mobile">
+            商品详情
+        </a>
+        <a class="mui-control-item" href="#item2mobile">
+            评价
+        </a>
+    </div>
+</div>
+<div class="mui-content">
+    <!--展示的图片-->
+    <img id="img1" src="../images/yuantiao.jpg"/>
+    <!-- 商品名称 -->
+    <div class="goodsname">2017秋季新款 韩国东大门圆领针织裙纯色大牌系带显瘦连衣裙</div>
+    <div class="price">
+        <div class="l"><b>&yen; 107.00</b>
+            <del>&yen; 177.00</del>
+            <span>已售 99件</span></div>
+    </div>
+    <!--商品规格选项卡-->
+    <div class="mui-card">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-collapse">
+                <a class="mui-navigate-right" href="#">选择商品规格</a>
+                <div class="mui-collapse-content">
+                    <div class="standard">
+                        <!--通过增减 active类来改变样式-->
+                        颜色:
+                        <ul>
+                            <li><a href="javascript:;">红色</a></li>
+                            <li class="active"><a href="javascript:;">蓝色</a></li>
+                            <li><a href="javascript:;">橘色</a></li>
+                            <li><a href="javascript:;">橘色</a></li>
+                            <li><a href="javascript:;">橘色</a></li>
+                        </ul>
+                    </div>
+                    <div class="standard">
+                        大小:
+                        <ul>
+                            <li class="active"><a href="javascript:;">S</a></li>
+                            <li><a href="javascript:;">M</a></li>
+                            <li><a href="javascript:;">L</a></li>
+                            <li><a href="javascript:;">XL</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--底部= 收藏+加入购物车+立即购买-->
+    <div class="bot">
+        <!--如果是已收藏,那么给第一个div加一个active类名即可-->
+        <div class="favorite active">收藏</div>
+        <div class="add_cart">加入购物车</div>
+        <div class="bug_now">立即购买</div>
+    </div>
+    <!--商品详情和商品评价-->
+    <div class="other">
+        <div class="mui-content">
+            <div id="slider" class="mui-slider">
+                <div id="sliderSegmentedControl"
+                     class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                    <a class="mui-control-item mui-active" href="#item1mobile">
+                        商品详情
+                    </a>
+                    <a class="mui-control-item" href="#item2mobile">
+                        评价
+                    </a>
+                </div>
+                <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+                <div class="mui-slider-group">
+                    <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                        <!--这里显示商品的图文详情,下面是-->
+                        <iframe src="http://localhost:63342/php_qpw/index.html" frameborder="0" scrolling="no"
+                                id="detail" onload="this.height=300">
+                        </iframe>
+                    </div>
+                    <div id="item2mobile" class="mui-slider-item mui-control-content">
+                        <!--这里显示商品的评价-->
+                        <ul>
+                            <li>
+                                <div class="item">
+                                    <div>
+                                        <img src="../images/pjtx.png" alt="">
+                                        <b>我乃芭芭拉</b>
+                                    </div>
+                                    <p>东西不错,不错,真不错!</p>
+                                    <span>发布时间 : 2017-09-25 10:10</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <div>
+                                        <img src="../images/pjtx.png" alt="">
+                                        <b>我乃芭芭拉</b>
+                                    </div>
+                                    <p>东西不错,不错,真不错!</p>
+                                    <span>发布时间 : 2017-09-25 10:10</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <div>
+                                        <img src="../images/pjtx.png" alt="">
+                                        <b>我乃芭芭拉</b>
+                                    </div>
+                                    <p>东西不错,不错,真不错!</p>
+                                    <span>发布时间 : 2017-09-25 10:10</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <div>
+                                        <img src="../images/pjtx.png" alt="">
+                                        <b>我乃芭芭拉</b>
+                                    </div>
+                                    <p>东西不错,不错,真不错!</p>
+                                    <span>发布时间 : 2017-09-25 10:10</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../res/mui/js/mui.min.js"></script>
+<script src="../res/zepto/zepto.min.js"></script>
+<script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    mui('.mui-input-group').on('change', 'input', function () {
+        if (this.checked) {
+            switch (this.value) {
+                case 'static':
+                    document.getElementById("img1").className = "";
+                    document.getElementById("slider").classList.add("mui-hidden");
+                    break;
+                case 'slider':
+                    document.getElementById("img1").className = "mui-hidden";
+                    if (slider.classList.contains("mui-hidden")) {
+                        document.getElementById("slider").classList.remove("mui-hidden");
+                    }
+                    break;
+            }
+        }
+    });
+</script>
+<script type="text/javascript">
+    var ids = window.setInterval("reinitIframe()", 500);
+    var itemIndex = 0;//默认显示商品详情.
+    document.getElementById('slider').addEventListener('slide', function (e) {
+        //监听 商品详情和评价切换事件.
+        if (e.detail.slideNumber === 0) {
+            itemIndex = 0;
+            ids = window.setInterval("reinitIframe()", 500);
+            document.getElementById('detail').style.display = 'block';
+            $('#fixed_tab .mui-control-item:first-child').addClass('mui-active');
+            $('#fixed_tab .mui-control-item:last-child').removeClass('mui-active');
+
+        } else if (e.detail.slideNumber === 1) {
+            itemIndex = 1;
+            clearInterval(ids);
+            document.getElementById('detail').style.display = 'none';
+            $('#fixed_tab .mui-control-item:first-child').removeClass('mui-active');
+            $('#fixed_tab .mui-control-item:last-child').addClass('mui-active');
+
+        }
+    });
+    //iframe高度自适应的方法
+    function reinitIframe() {
+        var iframe = document.getElementById("detail");
+        try {
+            var bHeight = iframe.contentWindow.document.body.scrollHeight;
+            var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+            var height = Math.max(bHeight, dHeight);
+            iframe.height = height;
+        } catch (ex) {
+        }
+    }
+
+</script>
+<!--商品样式选择时的js-->
+<script>
+//    事件委托,以及同一规格只能单选的问题
+    $('div.mui-card').on('click','.standard li',function(){
+        $(this).siblings('li.active').removeClass('active');
+        $(this).addClass('active');
+    });
+</script>
+<script>
+    $(window).scroll(function(){
+        var topHeight = $('#slider').offset().top;//获取了元素在页面没有位移的情况下,距离顶部的高度
+        var fixedTopHeight = $('#fixed_tab').offset().top;//获取了元素在页面没有位移的情况下,距离顶部的高度
+//        var fixedHeight = $('#fixed_tab').height();//获取元素高度,不显示的时候,高度为零
+//        var top = $(window).scrollTop();
+        if ($('#fixed_tab').css('display') == 'none'){
+            if (topHeight < (fixedTopHeight+45)) {
+                $('#fixed_tab').show();
+            } else {
+                $('#fixed_tab').hide();
+            }
+
+        }else{
+            if (topHeight < fixedTopHeight) {
+                $('#fixed_tab').show();
+            } else {
+                $('#fixed_tab').hide();
+            }
+        }
+        $('#fixed_tab .mui-control-item').eq(itemIndex).addClass('mui-active').siblings().removeClass('mui-active');
+    });
+</script>
+</body>
+</html>
