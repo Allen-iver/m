@@ -8,7 +8,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!--标准mui.css-->
     <link rel="stylesheet" href="res/mui/css/mui.min.css">
+    <!--<link rel="stylesheet" href="/css/favorite_goods.css">-->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/userindex_common.css">
 </head>
 
 <body>
@@ -23,7 +25,7 @@
         <span class="mui-tab-label">类目</span>
     </a>
     <a class="mui-tab-item" href="#search">
-        <span class="mui-icon mui-icon-contact"></span>
+        <span class="mui-icon mui-icon-search"></span>
         <span class="mui-tab-label">搜索</span>
     </a>
     <a class="mui-tab-item" href="#cart">
@@ -35,7 +37,7 @@
         <span class="mui-tab-label">我的</span>
     </a>
 </nav>
-<div class="mui-content main">
+<div class="mui-content tab5">
     <!--首页-->
     <div id="index" class="mui-control-content mui-active">
         <!--头部-->
@@ -252,38 +254,52 @@
             <span>购物车还是空的,去逛逛吧!</span>
         </div>
     </div>
-    <!--我的-->
-    <div id="usercenter" class="mui-control-content">
-        <!--头部-->
-        <header>
-            我的
-        </header>
-        <!--未登录的时候的登录按钮,以及已经登录之后的用户信息.将他分成了两部分通过改变display来展示-->
-        <div class="login" style="display: none">
-            <a class="login_btn" href="javascript:;">点击登录</a>
+    <!--头部描述的区域-->
+<div id="usercenter" class="mui-control-content">
+    <header class="mui-bar mui-bar-nav cz_header">
+        <h1 id="title" class="mui-title">我的</h1>
+    </header>
+    <div class="discript">
+        <div class="content">
+            <a href=""><img src="./images/wdtx.png" alt=""></a>
         </div>
-        <div class="user">
-            <div class="head"></div>
-            <div class="name">就差剁吊了</div>
+        <div class="username">
+            <span>剁手老大</span>
         </div>
-        <ul>
-            <li class="mui-table-view-cell">
-                <a id="changeName" class="mui-navigate-right">修改昵称</a>
-            </li>
-            <li class="mui-table-view-cell">
-                <a id="changePwd" class="mui-navigate-right">修改密码</a>
-            </li>
-            <li class="mui-table-view-cell">
-                <a id="address" class="mui-navigate-right">收货地址</a>
-            </li>
-            <li class="mui-table-view-cell">
-                <a id="favorite" class="mui-navigate-right">收藏夹</a>
-            </li>
-            <li class="mui-table-view-cell">
-                <a id="myOrder" class="mui-navigate-right">我的订单</a>
-            </li>
 
-        </ul>
+    </div>
+
+    <!--表单-->
+    <div class="user_form">
+        <div class="cell">
+            <span>积分满5000vip全场享最低价</span>
+        </div>
+        <div class="name" id="namebtn">
+            <a href="./user/changeName.html";>修改昵称</a>
+        </div>
+        <div class="pass" id="passbtn">
+            <a href="./user/changePwd.html";>修改密码</a>
+        </div>
+        <div class="address">
+            <a href="./user/address.html";>收获地址</a>
+        </div>
+        <div class="collect">
+            <a href="./goods/favorite_goods.html";>收藏夹</a>
+        </div>
+        <div class="my_order">
+            <a href="javascript:";>我的订单</a>
+        </div>
+        <div class="set">
+            <a href="./user/setting.html">设置</a>
+        </div>
+    </div>
+
+    <!--退出登录-->
+    <div class="user_logout">
+        <div class="login_zc">
+            <a href="javascript:;"><img src="./images/tcdl.png" alt=""></a>
+        </div>
+    </div>
     </div>
 </div>
 </body>
@@ -311,29 +327,29 @@
     });
     //
     $('#tab5').click(function () {
-
         $('.mui-active').removeClass('mui-active');
         $('#usercenter').addClass('mui-active');
         $('#tab5').addClass('mui-active');
     });
 
-    //以下代码似乎没有生效.
-    $(function(){
-        if (window.sessionStorage.getItem('user_id')){
-            //判断是否登录显示不同界面
-            $('div.login').hide();
-            $('div.user').show();
+    //  判断登录状态
+    document.querySelector('#tab5').onclick = function (){
+        if(window.sessionStorage.getItem('tel')){
+            location.href='index.html#tab5';
         }else{
-            $('div.user').hide();
-            $('div.login').show();
+            location.href='./user/login.html';
         }
-        if (window.sessionStorage.getItem('come_from_login')){
-            $('.mui-active').removeClass('mui-active');
-            $('#usercenter').addClass('mui-active');
-            $('#tab5').addClass('mui-active');
-            window.sessionStorage.setItem('come_from_login', false);
-        }
-    })();
+    };
+
+    // 判断购物车车显示状态
+//    document.querySelector('#cart').onclick = function (){
+//        if(window.sessionStorage.getItem('tel')){
+//            location.href='./user/login.html';
+//        }else{
+//            location.href='./user/login.html';
+//        }
+//    }
+
 
 </script>
 </html>

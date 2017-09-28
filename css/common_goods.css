@@ -59,3 +59,10 @@ a {
     font-size: 20.7px;
   }
 }
+body {
+  background-color: #FFFFFF;
+}
+.cz_header {
+  background-color: #ffffff;
+  position: relative;
+}

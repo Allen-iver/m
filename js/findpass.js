@@ -1,15 +1,15 @@
 var dsshop = dsshop || {};
 (function () {
-    dsshop.register ={
+    dsshop.findpass={
         init: {
             initCodeBtn: function () {
-                $('.getCode_btn').on('touchstart', function () {
+                $('.getCode_btn').on('touchstart',function () {
                     $.ajax({
                         url: "http://api.loseu.cn/index.php/home/user/verify",
-                        data:{
+                        data: {
                             tel:$("#tel").val()
                         },
-                        type: "post",
+                        type: 'post',
                         dataType: 'json',
                         beforeSend:function () {
                             var tel = $('#tel').val();
@@ -21,33 +21,26 @@ var dsshop = dsshop || {};
                         },
                         success: function (data) {
                             console.log(data);
-                            // if (msg.err_no === 0) {
-                            //     window.location.hfer = './login.html';
-                            // } else {
-                            //     mui.toast(msg.err_msg,{duration:1000, type:'div'});
-                            // }
                         }
                     });
                 });
             },
-            // 初始化注册按钮
-            initRegistrBtn:function () {
-                $(".login_zc").on('touchstart',function () {
-                    //获取表单里面的数据,进行提交
-                    var data = $('.cz_form').serialize();
+
+            // 初始化找回密码按钮
+            initFindpassBtn: function(){
+                $('.login_zc').on('touchstart',function () {
+                    // 获取表单里面的数据进行提交
+                    var data = $('.cz_form').serialize();  //内容序列化
                     $.ajax({
-                       url: 'http://api.loseu.cn/index.php/home/user/register',
+                        url: 'http://api.loseu.cn/index.php/home/user/findPwd',
                         data: data,
-                        dataType: 'json',
                         type: 'post',
+                        dataType: 'json',
                         success: function (msg) {
-                            console.log(msg);
                             if(msg.err_no == '0'){
-                                //注册成功
-                                window.sessionStorage.setItem('tel',tel);
-                                window.sessionStorage.setItem('user_name',user_name);
-                                window.sessionStorage.setItem('password',password);
                                 window.location.href = './login.html';
+                                window.sessionStorage.setItem('tel',tel);
+                                window.sessionStorage.setItem('password',password);
                             }else {
                                 mui.toast(msg.message,{duration:1000,type: 'div'});
                             }
@@ -56,12 +49,11 @@ var dsshop = dsshop || {};
                 });
             }
         },
-
-        initData:function(){
-            //登录按钮的具体操作
+        initData:function () {
+            //修改密码的具体操作
             this.init.initCodeBtn();
-            this.init.initRegistrBtn();
+            this.init.initFindpassBtn();
         }
-    };
-    dsshop.register.initData();
+    }
+
 })();

@@ -6,7 +6,7 @@ var dsshop = dsshop || {};
                 $('#loginbtn').click(function () {
                     var data = $(".login_form").serialize();  //序列化操作
                     $.ajax({
-                        url: "http://api.loseu.cn/index.php/home/user/login.html",
+                        url: "http://api.loseu.cn/index.php/home/user/login",
                         data: data,
                         dataType: 'json',
                         type: 'post',
@@ -19,7 +19,7 @@ var dsshop = dsshop || {};
                                 window.sessionStorage.setItem('user_id', user_id);
                                 window.sessionStorage.setItem('name', name);
                                 window.sessionStorage.setItem('come_from_login', true);
-                                window.location.href = '../index.html';
+                                window.location.href = '../index.html#tab5';
                             } else if (msg.err_no == 1) {
                                 mui.toast(msg.err_msg, {duration: 1000, type: "div"});
                             }
@@ -33,7 +33,6 @@ var dsshop = dsshop || {};
         }
     };
     dsshop.login.initData();
-
 })();
 
 // 13311221135

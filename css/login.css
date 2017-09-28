@@ -25,6 +25,10 @@ a {
 .mui-bar-tab .mui-tab-item.mui-active {
   color: #FFE62D;
 }
+.mui-bar .mui-icon {
+  margin-top: 0.15rem;
+  font-size: 1.099rem;
+}
 @media only screen and (width: 320px) {
   html {
     font-size: 16px;
@@ -63,8 +67,9 @@ header #register {
   line-height: 2.96296296rem;
   height: 2.96296296rem;
 }
-.cz_header a.mui-icon {
+.cz_header a {
   font-size: 1.0625rem;
+  color: #000000;
 }
 .cz_header {
   background-color: #ffffff;
