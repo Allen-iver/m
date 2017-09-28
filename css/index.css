@@ -161,6 +161,112 @@ header:after {
   top: 0;
   left: 50%;
 }
+.main > div#search {
+  padding-top: 0;
+  margin: 10px 5%;
+}
+#search input[type=search] {
+  width: 75%;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 34px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  text-align: left;
+}
+#search button {
+  background-color: #ff520b;
+  color: #fff;
+  width: 22%;
+  float: right;
+  top: 0;
+  right: 0;
+}
+#search .history {
+  position: relative;
+  display: none;
+}
+#search .history.active {
+  display: block;
+}
+#search .empty {
+  margin-top: 30px;
+  display: none;
+  text-align: center;
+}
+#search .empty.active {
+  display: block;
+}
+#search .history .title,
+#search .hot .title {
+  color: #000;
+  font-size: 1.2rem;
+}
+#search .history .title:after,
+#search .hot .title:after {
+  margin-top: 10px;
+  content: '';
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: #cccccc;
+}
+#search .history li {
+  padding: 3px 0;
+}
+#search .history li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#search .history li a:hover {
+  color: #ff520b;
+}
+#search .history li:after {
+  margin-top: 5px;
+  content: '';
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: #cccccc;
+}
+#search .history span {
+  text-align: center;
+  width: 160px;
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: -80px;
+  padding: 3px;
+  left: 50%;
+  border: 1px #ff520b solid;
+  color: #ff520b;
+  border-radius: 5px;
+}
+#search .hot {
+  position: fixed;
+  width: 90%;
+  bottom: 80px;
+}
+#search .hot ul {
+  padding-top: 10px;
+}
+#search .hot ul li {
+  float: left;
+  margin: 3px 8px;
+}
+#search .hot ul li a {
+  display: block;
+  padding: 3px 5px;
+  border: 1px #ff520b solid;
+  border-radius: 3px;
+}
+#search .hot ul li a:hover {
+  color: #ff520b;
+}
 #usercenter {
   background-color: #fff;
 }

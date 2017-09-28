@@ -16,7 +16,7 @@
 <body>
 <!--底部通栏-->
 <nav class="mui-bar mui-bar-tab">
-    <a class="mui-tab-item  mui-active"  href="#index">
+    <a class="mui-tab-item"  href="#index">
         <span class="mui-icon mui-icon-home"></span>
         <span class="mui-tab-label">首页</span>
     </a>
@@ -24,8 +24,13 @@
         <span class="mui-icon mui-icon-email"></span>
         <span class="mui-tab-label">类目</span>
     </a>
+<<<<<<< HEAD
     <a class="mui-tab-item" href="#search">
         <span class="mui-icon mui-icon-search"></span>
+=======
+    <a class="mui-tab-item   mui-active" href="#search">
+        <span class="mui-icon mui-icon-contact"></span>
+>>>>>>> 7ffc115c464ea4553a29d928d71e2c1c7c61f049
         <span class="mui-tab-label">搜索</span>
     </a>
     <a class="mui-tab-item" href="#cart">
@@ -39,7 +44,7 @@
 </nav>
 <div class="mui-content tab5">
     <!--首页-->
-    <div id="index" class="mui-control-content mui-active">
+    <div id="index" class="mui-control-content">
         <!--头部-->
         <header>
             <div class="logo">Cut Hand Shop</div>
@@ -238,10 +243,49 @@
         </ul>
     </div>
     <!--搜索-->
-    <div id="search" class="mui-control-content">
-        <header>
-            搜索
-        </header>
+    <div id="search" class="mui-control-content  mui-active">
+        <div class="head">
+            <form action="#">
+                <input type="search" placeholder="请输入要搜索的关键字">
+                <button>搜索</button>
+            </form>
+        </div>
+        <!--有搜索记录的时候,显示搜索记录,无搜索记录的时候显示empty的div. 通过增删active来达到这一效果-->
+        <div class="history active">
+           <div class="title">历史搜索</div>
+            <ul>
+                <li>
+                    <a href="">羽绒服</a>
+                </li>
+                <li>
+                    <a href="">羽绒服</a>
+                </li>
+                <li>
+                    <a href="">羽绒服</a>
+                </li>
+            </ul>
+            <span>清空搜索历史</span>
+        </div>
+        <div class="empty">
+            你还没有搜索记录!
+        </div>
+        <!--热门推荐-->
+        <div class="hot">
+            <div class="title">热门搜索</div>
+            <ul>
+                <li><a href="#">小西服</a></li>
+                <li><a href="#">小西服</a></li>
+                <li><a href="#">小西小西服小西服服</a></li>
+                <li><a href="#">小小西服西服</a></li>
+                <li><a href="#">小西服</a></li>
+                <li><a href="#">小小西服小西服小西服西服</a></li>
+                <li><a href="#">小</a></li>
+                <li><a href="#">小小西服小西服西服</a></li>
+                <li><a href="#">小西服</a></li>
+                <li><a href="#">小小西服服</a></li>
+                <li><a href="#">小西服</a></li>
+            </ul>
+        </div>
     </div>
     <!--购物车-->
     <div id="cart" class="mui-control-content">
@@ -314,7 +358,7 @@
     slider.slider({
         interval: 2000
     });
-    $('.head').click(function () {
+    $('#usercenter .head').click(function () {
        alert('我是用来显示投降的div,点击我之后,要弹出底部栏,我要实现修改头像的功能');
     });
     $('.login_btn').click(function(){
