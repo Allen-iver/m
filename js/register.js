@@ -45,7 +45,7 @@ var dsshop = dsshop || {};
                             if(msg.err_no == '0'){
                                 //注册成功
                                 window.sessionStorage.setItem('tel',tel);
-                                window.sessionStorage.setItem('user_name',user_name);
+                                window.sessionStorage.setItem('name',user_name);
                                 window.sessionStorage.setItem('password',password);
                                 window.location.href = './login.html';
                             }else {

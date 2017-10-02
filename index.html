@@ -24,12 +24,8 @@
         <span class="mui-icon mui-icon-email"></span>
         <span class="mui-tab-label">类目</span>
     </a>
-
-    <a class="mui-tab-item" href="#search">
-        <span class="mui-icon mui-icon-search"></span>
-
     <a class="mui-tab-item   mui-active" href="#search">
-        <span class="mui-icon mui-icon-contact"></span>
+        <span class="mui-icon mui-icon-search"></span>
         <span class="mui-tab-label">搜索</span>
     </a>
     <a class="mui-tab-item" href="#cart">
@@ -41,7 +37,7 @@
         <span class="mui-tab-label">我的</span>
     </a>
 </nav>
-<div class="mui-content tab5">
+<div class="mui-content tab5 main">
     <!--首页-->
     <div id="index" class="mui-control-content">
         <!--头部-->
@@ -238,11 +234,10 @@
                     <span>内衣</span>
                 </div>
             </li>
-
         </ul>
     </div>
     <!--搜索-->
-    <div id="search" class="mui-control-content  mui-active">
+    <div id="search" class="mui-control-content">
         <div class="head">
             <form action="#">
                 <input type="search" placeholder="请输入要搜索的关键字">
@@ -298,18 +293,17 @@
         </div>
     </div>
     <!--头部描述的区域-->
-<div id="usercenter" class="mui-control-content">
+<div id="usercenter" class="mui-control-content  mui-active">
     <header class="mui-bar mui-bar-nav cz_header">
         <h1 id="title" class="mui-title">我的</h1>
     </header>
     <div class="discript">
-        <div class="content">
-            <a href=""><img src="./images/wdtx.png" alt=""></a>
+        <div class="content" id="uploadImg">
+            <a href="#"><img src="./images/wdtx.png" alt="" name="pic"></a>
         </div>
-        <div class="username">
+        <div class="user_name">
             <span>剁手老大</span>
         </div>
-
     </div>
 
     <!--表单-->
@@ -384,6 +378,13 @@
         }
     };
 
+    // 修改头像
+    document.querySelector('#uploadImg').onclick = function () {
+        window.sessionStorage.getItem('id');
+        window.sessionStorage.getItem('pic');
+        location.href = './user/upload_img.html';
+    }
+
     // 判断购物车车显示状态
 //    document.querySelector('#cart').onclick = function (){
 //        if(window.sessionStorage.getItem('tel')){
@@ -392,7 +393,5 @@
 //            location.href='./user/login.html';
 //        }
 //    }
-
-
 </script>
 </html>

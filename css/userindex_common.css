@@ -65,7 +65,6 @@ a {
 .discript {
   width: 100%;
   background-color: #ff520b;
-  padding: 4%;
   overflow: hidden;
 }
 .content a {
@@ -73,20 +72,22 @@ a {
   width: 100%;
   display: inline-block;
   width: 5rem;
-  margin-top: 2.8rem;
   float: left;
 }
 .content a img {
   display: block;
   width: 100%;
-  margin-left: 10%;
+  margin-left: 25%;
+  margin-top: 12%;
 }
-.username {
-  padding-left: 35%;
-  padding-top: 25%;
+.user_name {
+  padding-left: 40%;
+  padding-bottom: 25%;
 }
-.username span {
+.user_name > span {
   color: #fff;
+  padding-left: 20px;
+  padding-top: 40px;
 }
 .total {
   padding-left: 65%;
